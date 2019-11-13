@@ -8,31 +8,44 @@ var twoP = document.querySelector("#twoP");
 var threeP = document.querySelector("#threeP");
 var fourP = document.querySelector("#fourP");
 var fiveP = document.querySelector("#fiveP");
-var now = moment().format("h:mm a")
+
+var times = document.querySelector(".times");
 
 
-var plans = {
-    nineAm: "",
-    tenAm: "",
-    elevenAm: "",
-    twelvePm: "",
-    onePm: "",
-    twoPm: "",
-    threePm: "",
-    fourPm: "",
-    fivePm: "",
-}
+var nineAm = [];
+var tenAm = [];
+var elevenAm = [];
+var twelvePm = [];
+var onePm = [];
+var twoPm = [];
+var threePm = [];
+var fourPm = [];
+var fivePm = [];
 
 
+
+
+// Button Click////////////////////////////////////
+times.addEventListener("click", function (event) {
+    var element = event.target;
+    if (element.matches("button") === true) {
+
+
+
+    }
+
+});
+
+
+
+// Time display////////////////////////
 document.querySelector("#currentDay")
     .innerHTML = moment().format('MMMM Do YYYY, h:mm:ss a');
-
-
 var update = function () {
     document.querySelector("#currentDay")
         .innerHTML = moment().format('MMMM Do YYYY, h:mm:ss a');
 }
 setInterval(update, 1000);
 
-
+var now = moment().format("h:mm a");
 console.log(now)
