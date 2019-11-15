@@ -50,67 +50,68 @@ var update = function () {
 
 
     if (moment().hour() == 9) {
-        inputs[0].className = "past present"
+        inputs[0].className = "input past present"
         for (i = 1; i < inputs.length; i++) {
-            inputs[i].className = "past future"
+            inputs[i].className = "input past future"
         }
     }
     if (moment().hour() == 10) {
-        inputs[0].className = "past"
-        inputs[1].className = "past present"
+        inputs[0].className = "input past"
+        inputs[1].className = "input past present"
         for (i = 2; i < inputs.length; i++) {
-            inputs[i].className = "past future"
+            inputs[i].className = "input past future"
         }
     }
     if (moment().hour() == 11) {
-        inputs[1].className = "past"
-        inputs[2].className = "past present"
+        inputs[1].className = "input past"
+        inputs[2].className = "input past present"
         for (i = 3; i < inputs.length; i++) {
-            inputs[i].className = "past future"
+            inputs[i].className = "input past future"
         }
     }
     if (moment().hour() == 12) {
-        inputs[2].className = "past"
-        inputs[3].className = "past present"
+        inputs[2].className = "input past"
+        inputs[3].className = "input past present"
         for (i = 4; i < inputs.length; i++) {
-            inputs[i].className = "past future"
+            inputs[i].className = "input past future"
         }
     }
     if (moment().hour() == 13) {
-        inputs[3].className = "past"
-        inputs[4].className = "past present"
+        inputs[3].className = "input past"
+        inputs[4].className = "input past present"
         for (i = 5; i < inputs.length; i++) {
-            inputs[i].className = "past future"
+            inputs[i].className = "input past future"
         }
     }
     if (moment().hour() == 14) {
-        inputs[4].className = "past"
-        inputs[5].className = "past present"
+        inputs[4].className = "input past"
+        inputs[5].className = "input past present"
         for (i = 6; i < inputs.length; i++) {
-            inputs[i].className = "past future"
+            inputs[i].className = "input past future"
         }
     }
     if (moment().hour() == 15) {
-        inputs[5].className = "past"
-        inputs[6].className = "past present"
+        inputs[5].className = "input past"
+        inputs[6].className = "input past present"
         for (i = 7; i < inputs.length; i++) {
-            inputs[i].className = "past future"
+            inputs[i].className = "input past future"
         }
 
     }
     if (moment().hour() == 16) {
-        inputs[6].className = "past"
-        inputs[7].className = "past present"
+        inputs[6].className = "input past"
+        inputs[7].className = "input past present"
         for (i = 8; i < inputs.length; i++) {
-            inputs[i].className = "past future"
+            inputs[i].className = "input past future"
         }
 
     }
     if (moment().hour() == 17) {
-        inputs[7].className = "past "
-        inputs[8].className = "past present"
+        inputs[7].className = "input past "
+        inputs[8].className = "input past present"
 
     }
+    else{inputs.className = "input past"}
 
 }
 setInterval(update, 1000);
