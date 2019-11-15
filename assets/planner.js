@@ -27,12 +27,15 @@ var fivePm = [];
 
 
 
-
+// $('button').click(function(){
+//     var value = $(this).siblings('input').val();
+//     alert(value);
+// })
 // Button Click////////////////////////////////////
 times.addEventListener("click", function (event) {
     var element = event.target;
     if (element.matches("button") === true) {
-
+        alert(element.parentNode.parentNode.querySelector(".input").value)
     }
 
 });
@@ -111,7 +114,7 @@ var update = function () {
         inputs[8].className = "input past present"
 
     }
-    else{inputs.className = "input past"}
+    else { inputs.className = "input past" }
 
 }
 setInterval(update, 1000);
