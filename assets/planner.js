@@ -15,33 +15,80 @@ var times = document.querySelector(".times");
 // queryselector all common class for array of input boxes
 
 
-var nineAm = [];
-var tenAm = [];
-var elevenAm = [];
-var twelvePm = [];
-var onePm = [];
-var twoPm = [];
-var threePm = [];
-var fourPm = [];
-var fivePm = [];
+var nineAm = ""
+var tenAm = ""
+var elevenAm = ""
+var twelvePm = ""
+var onePm = ""
+var twoPm = ""
+var threePm = ""
+var fourPm = ""
+var fivePm = ""
 
 
+renderContents();
 
-// $('button').click(function(){
-//     var value = $(this).siblings('input').val();
-//     alert(value);
-// })
 // Button Click////////////////////////////////////
 times.addEventListener("click", function (event) {
     var element = event.target;
     if (element.matches("button") === true) {
-        alert(element.parentNode.parentNode.querySelector(".input").value)
+        var content = element.parentNode.parentNode.querySelector(".input").value
+        var contentID = element.parentNode.parentNode.querySelector(".input").id
+
+
+        if (contentID == "nineA") {
+            nineAm = content;
+            localStorage.setItem("9am", nineAm);
+            console.log("nine am " + nineAm);
+        }
+        if (contentID == "tenA") {
+            tenAm = content;
+            localStorage.setItem("10am", tenAm);
+        }
+        if (contentID == "elevenA") {
+            elevenAm = content;
+            localStorage.setItem("11am", elevenAm);
+        }
+        if (contentID == "twelveP") {
+            twelvePm = content;
+            localStorage.setItem("12pm", twelvePm);
+        }
+        if (contentID == "oneP") {
+            onePm = content;
+            localStorage.setItem("1pm", onePm);
+        }
+        if (contentID == "twoP") {
+            twoPm = content;
+            localStorage.setItem("2pm", twoPm);
+        }
+        if (contentID == "threeP") {
+            threePm = content;
+            localStorage.setItem("3pm", threePm);
+        }
+        if (contentID == "fourP") {
+            fourPm = content;
+            localStorage.setItem("4pm", fourPm);
+        }
+        if (contentID == "fiveP") {
+            fivePm = content;
+            localStorage.setItem("5pm", fivePm);
+        }
     }
 
 });
 
-//    var first = moment().hour(9)
-//    console.log(first.unix())
+function renderContents() {
+nineA.textContent = localStorage.getItem("9am");
+tenA.textContent = localStorage.getItem("10am");
+elevenA.textContent = localStorage.getItem("11am");
+twelveP.textContent = localStorage.getItem("12pm");
+oneP.textContent = localStorage.getItem("1pm");
+twoP.textContent = localStorage.getItem("2pm");
+threeP.textContent = localStorage.getItem("3pm");
+fourP.textContent = localStorage.getItem("4pm");
+fiveP.textContent = localStorage.getItem("5pm");
+
+}
 
 // Time display////////////////////////
 document.querySelector("#currentDay")
