@@ -12,6 +12,9 @@ var inputs = document.querySelectorAll(".input")
 var times = document.querySelector(".times");
 
 
+var index = document.querySelectorAll("data-index")
+console.log(index);
+// get data index compare to hour
 // queryselector all common class for array of input boxes
 
 
@@ -34,6 +37,7 @@ times.addEventListener("click", function (event) {
     if (element.matches("button") === true) {
         var content = element.parentNode.parentNode.querySelector(".input").value
         var contentID = element.parentNode.parentNode.querySelector(".input").id
+
 
 
         if (contentID == "nineA") {
@@ -168,6 +172,6 @@ setInterval(update, 1000);
 
 
 
-var now = moment().format("h:mm a");
+var now = moment().hour();
 console.log("now: " + now)
 console.log("hour" + moment().hour())
